@@ -21,7 +21,8 @@ Calendar is a collection of Beautiful Activities which help others to make there
 
 ## Credits
 
-Desgin & Developed by : **[Jatin Sahgal](http://jatin.techcruzers.com)**
+Desgin & Developed by : **[Jatin Sahgal](https://www.linkedin.com/in/jatinsahgal/)**
+ (**[Linkedin](https://www.linkedin.com/in/jatinsahgal/)** & **[Website](https://jatin.techcruzers.com)**) 
 
 Content Writer : **[Achal Garg](http://achal.techcruzers.com)**
 
