@@ -76,7 +76,7 @@ have some Beautiful UI Components and Multi files Mode for android Developers to
 
 
 ## License
-    Copyright (c) 2015 Wouter Dullaert
+    Copyright (c) 2018 Jatin Sahgal
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
