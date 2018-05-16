@@ -19,7 +19,7 @@ Selected Date Picker | Custom Date Picker
 
 ### Working
 
-Dual Date Picker | 
+Single Date Picker | 
 ---- |
 ![calender](https://user-images.githubusercontent.com/38988514/40102644-a742f642-5908-11e8-9a28-bc8c8ef7423c.gif)
 
