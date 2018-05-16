@@ -15,7 +15,7 @@ Before Selection | After Selection
 
 Selected Date Picker | Custom Date Picker
 ---- | ----
-![jamun_pickers_country_activity](https://user-images.githubusercontent.com/38988514/39989082-a8fa7164-5786-11e8-8d01-7f4b27b9f112.png) | ![jamun_pickers_country_dialog](https://user-images.githubusercontent.com/38988514/39989084-aa14f27c-5786-11e8-8c26-07fb9ffa5c26.png)
+![jamun_Calendar_single](https://user-images.githubusercontent.com/38988514/40102554-733de262-5908-11e8-93da-140001e494a2.png) | ![jamun_calendar_single_custom_selection](https://user-images.githubusercontent.com/38988514/40102555-738ad6d0-5908-11e8-8072-f05cd2a9cffb.png)
 
 ### Working
 
