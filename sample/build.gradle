@@ -27,4 +27,11 @@ dependencies {
     implementation 'com.android.support:design:27.1.1'
     implementation 'tk.jamun:ui:0.0.1'
     implementation 'tk.jamun:scanner:0.0.1'
+    //    implementation 'tk.jamun:calendar:0.0.1'
+//    implementation 'tk.jamun:pickers:0.0.1'
+//    implementation 'tk.jamun:gallery:0.0.1'
+//    implementation 'tk.jamun:country:0.0.1'
+//    implementation 'tk.jamun:language:0.0.1'
+//    implementation 'tk.jamun:volley:0.0.1'
+
 }
