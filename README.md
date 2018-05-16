@@ -5,6 +5,24 @@ Calendar is a collection of Beautiful Activities which help others to make there
 
 * 
 
+### Dual Date Picker
+
+Before Selection | After Selection
+---- | ----
+![jamun_calendar_dual](https://user-images.githubusercontent.com/38988514/40102556-73d15a56-5908-11e8-84db-81565897c8c8.png) | ![jamun_calendar_dual_selection](https://user-images.githubusercontent.com/38988514/40102557-7414b288-5908-11e8-8b90-aaa4aff751e1.png)
+
+### Single Date Picker
+
+Selected Date Picker | Custom Date Picker
+---- | ----
+![jamun_Calendar_single](https://user-images.githubusercontent.com/38988514/40102554-733de262-5908-11e8-93da-140001e494a2.png) | ![jamun_calendar_single_custom_selection](https://user-images.githubusercontent.com/38988514/40102555-738ad6d0-5908-11e8-8072-f05cd2a9cffb.png)
+
+### Working
+
+Single Date Picker | 
+---- |
+![calender](https://user-images.githubusercontent.com/38988514/40102644-a742f642-5908-11e8-9a28-bc8c8ef7423c.gif)
+
 ### What's New? (0.0.1)
 * Stable **Official Version** for Developers and Live Apps.
 * 
@@ -17,16 +35,12 @@ Calendar is a collection of Beautiful Activities which help others to make there
 
 # Dependency
 
-* 
+* Android Appcompact and Support Fragment Library ``v27.1.1``
 
 ## Credits
 
 Desgin & Developed by : **[Jatin Sahgal](https://www.linkedin.com/in/jatinsahgal/)**
  (**[Linkedin](https://www.linkedin.com/in/jatinsahgal/)** & **[Website](https://jatin.techcruzers.com)**) 
-
-Content Writer : **[Achal Garg](http://achal.techcruzers.com)**
-
-Company : **[Techcruzers](http://www.techcruzers.com)**
 
 # Live Project using this Library
 
@@ -62,7 +76,7 @@ have some Beautiful UI Components and Multi files Mode for android Developers to
 
 
 ## License
-    Copyright (c) 2015 Wouter Dullaert
+    Copyright (c) 2018 Jatin Sahgal
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
