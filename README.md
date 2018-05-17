@@ -39,6 +39,8 @@ Selected Date Picker | Custom Date Picker
 
 Once the project has been added to gradle, You can use these lines of code to configure pickers....
 
+
+
 ## Calling Code
 
 Three simple steps to Take care of whole Modele : 
