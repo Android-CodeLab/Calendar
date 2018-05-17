@@ -94,7 +94,7 @@ Result Provide you ModelCalendar Object, that have all required Object to Full f
 
 Intent Object provide you custom functionality to work Module according to your requirement :
 
-**Set Title of the Date Picker**
+* **Set Title of the Date Picker**
 
 By Defining this tag with String can help you setting Title of the date Picker.
 
@@ -102,7 +102,7 @@ By Defining this tag with String can help you setting Title of the date Picker.
 intentType.putExtra(INTENT_CALENDER_TITLE, "Title of the Picker");
 ```
 
-**Set Predefined Date**
+* **Set Predefined Date**
 
 To set selected Date in Calendar, Also used if user already selected Date, so this will help you user to Navigate Directly to Selected Once :
 
@@ -110,19 +110,19 @@ To set selected Date in Calendar, Also used if user already selected Date, so th
 **Single Date Picker**
 
 intent.putExtra(INTENT_CALENDER_DATE, modelCalender.getDate());
-intentType.putExtra(INTENT_CALENDER_MONTH, modelCalender.getMonth());
+intentType.putExtra(INTENT_CALENDER_MONTH, modelCalender.getMonth());//(0 to 11)
 intentType.putExtra(INTENT_CALENDER_YEAR, modelCalender.getYear());
 
 **Multi Date Picker**
 intent.putExtra(INTENT_CALENDER_YEAR_FROM, modelCalenderFrom.getYear());
-intent.putExtra(INTENT_CALENDER_MONTH_FROM, modelCalenderFrom.getMonth() - 1);
+intent.putExtra(INTENT_CALENDER_MONTH_FROM, modelCalenderFrom.getMonth()); //(0 to 11)
 intent.putExtra(INTENT_CALENDER_DATE_FROM, modelCalenderFrom.getDate());
 intent.putExtra(INTENT_CALENDER_YEAR_TO, modelCalenderTo.getYear());
-intent.putExtra(INTENT_CALENDER_MONTH_TO, modelCalenderTo.getMonth() - 1);
+intent.putExtra(INTENT_CALENDER_MONTH_TO, modelCalenderTo.getMonth());//(0 to 11)
 intent.putExtra(INTENT_CALENDER_DATE_TO, modelCalenderTo.getDate());       
 ```
 
-**Set Minimum or Maximum Date Today**
+* **Set Minimum or Maximum Date Today**
 
 There is a provisioin in this library to start your Picker selection from Today either Today date as Starting date or Ending date :
 
@@ -136,27 +136,27 @@ intent.putExtra(INTENT_CALENDER_SET_MAX_DATE_TODAY, true);
 
 Warning Note : Don't set them both at once, it may be crash your app;
 
-**Set Maximum or Minimum Year,Date,Month for selection Upto**
+* **Set Maximum or Minimum Year,Date,Month for selection Upto**
 
- To bound your User Selection, just need to call intent with some Tags and Thats it Boundation Applied:
+To bound your User Selection, just need to call intent with some Tags and Thats it Boundation Applied:
  
 ```
 **Maximum Year Upto**
 intent.putExtra(INTENT_CALENDER_MAX_YEAR, currentYear + 10(upto Value));
-intent.putExtra(INTENT_CALENDER_MAX_MONTH, Month(upto Value));
+intent.putExtra(INTENT_CALENDER_MAX_MONTH, Month(upto Value));//(0 to 11)
 intent.putExtra(INTENT_CALENDER_MAX_DATE, date(upto Value));
 
 **Minimum Year Upto**
 intent.putExtra(INTENT_CALENDER_MIN_YEAR, currentYear - 10(Above Value));
-intent.putExtra(INTENT_CALENDER_MIN_MONTH, Month(Above Value));
+intent.putExtra(INTENT_CALENDER_MIN_MONTH, Month(Above Value));//(0 to 11)
 intent.putExtra(INTENT_CALENDER_MIN_DATE, date(Above Value));
 
 or For setting Both min and max Together
 intent.putExtra(INTENT_CALENDER_MAX_YEAR, currentYear + 10(upto Value));
-intent.putExtra(INTENT_CALENDER_MAX_MONTH, Month(upto Value));
+intent.putExtra(INTENT_CALENDER_MAX_MONTH, Month(upto Value));//(0 to 11)
 intent.putExtra(INTENT_CALENDER_MAX_DATE, date(upto Value));
 intent.putExtra(INTENT_CALENDER_MIN_YEAR, currentYear - 10(upto Value));
-intent.putExtra(INTENT_CALENDER_MIN_MONTH, Month(Above Value));
+intent.putExtra(INTENT_CALENDER_MIN_MONTH, Month(Above Value));//(0 to 11)
 intent.putExtra(INTENT_CALENDER_MIN_DATE, date(Above Value));
 
 Also Used as
@@ -164,14 +164,14 @@ Either,
 intent.putExtra(INTENT_CALENDER_SET_MAX_DATE_TODAY, true);
 
 intent.putExtra(INTENT_CALENDER_MIN_YEAR, currentYear - 10(upto Value));
-intent.putExtra(INTENT_CALENDER_MIN_MONTH, Month(Above Value));
+intent.putExtra(INTENT_CALENDER_MIN_MONTH, Month(Above Value));//(0 to 11)
 intent.putExtra(INTENT_CALENDER_MIN_DATE, date(Above Value));
 
 Or,
 intent.putExtra(INTENT_CALENDER_SET_MIN_DATE_TODAY, true);
 
 intent.putExtra(INTENT_CALENDER_MAX_YEAR, currentYear + 10(upto Value));
-intent.putExtra(INTENT_CALENDER_MAX_MONTH, Month(upto Value));
+intent.putExtra(INTENT_CALENDER_MAX_MONTH, Month(upto Value));//(0 to 11)
 intent.putExtra(INTENT_CALENDER_MAX_DATE, date(upto Value));
 
 
@@ -187,7 +187,7 @@ Warning Note : Don't call with Both INTENT_CALENDER_SET_MAX_DATE_TODAY or with I
  //used if user already selected Date, so this will help you user to Navigate Directly to Selected Once
  if (modelCalender.getDate() != 0) {
     intentType.putExtra(INTENT_CALENDER_DATE, modelCalender.getDate());
-    intentType.putExtra(INTENT_CALENDER_MONTH, modelCalender.getMonth());
+    intentType.putExtra(INTENT_CALENDER_MONTH, modelCalender.getMonth());//(0 to 11)
     intentType.putExtra(INTENT_CALENDER_YEAR, modelCalender.getYear());
  }
  intentType.putExtra(INTENT_CALENDER_TITLE, getString(R.string.string_activity_name_dob));
