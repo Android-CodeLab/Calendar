@@ -9,5 +9,5 @@
     <string name="string_message_alert">Message of Dialog Box</string>
     <string name="string_button_name_no">No</string>
     <string name="string_button_name_yes_want">Yes I want TO</string>
-    <string name="jamun_pickers_string_text_setting_select_language">Selected Language</string>
+    <string name="library_pickers_string_text_setting_select_language">Selected Language</string>
 </resources>

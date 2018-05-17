@@ -10,12 +10,12 @@ import java.util.ArrayList;
 
 import tk.jamun.ui.camera.classes.ActivityCamera;
 import tk.jamun.ui.gallery.classes.ActivityGallery;
-import tk.jamun.ui.gallery.classes.PickerSingle;
+import tk.jamun.ui.gallery.classes.PickerMulti;
 import tk.jamun.ui.gallery.helper.InterfaceGallery;
 import tk.jamun.ui.gallery.model.ModelChild;
 import tk.jamun.ui.utils.InterfaceUtils;
 
-import static tk.jamun.ui.camera.classes.ActivityCamera.COME_FROM_GALLERY;
+import static tk.jamun.ui.camera.classes.ActivityCamera.LIBRARY_COME_FROM_GALLERY;
 import static tk.jamun.ui.gallery.helper.InterfaceGallery.GALLERY_INTENT_COME_FOR;
 import static tk.jamun.ui.gallery.helper.InterfaceGallery.GALLERY_INTENT_FOR_MODEL;
 import static tk.jamun.ui.gallery.helper.InterfaceGallery.GALLERY_INTENT_MODE;
@@ -31,6 +31,7 @@ public class ActivityCameraGallery extends AppCompatActivity {
     private static final int ACTION_REQUEST_GALLERY = 999;
     private static final int ACTION_REQUEST_MANAGER = 113;
     private static final int ACTION_REQUEST_CAMERA = 111;
+    private File file;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +51,9 @@ public class ActivityCameraGallery extends AppCompatActivity {
                         ModelChild modelChild = data.getParcelableExtra(GALLERY_INTENT_FOR_MODEL);
                         if (modelChild != null)
                             try {
-                                File file = new File(modelChild.getFilePath());
+                            file = new File(modelChild.getFilePath());
                                 startActivityForResult(new Intent(ActivityCameraGallery.this, ActivityCamera.class)
-                                                .putExtra(InterfaceUtils.INTENT_COME_FROM, COME_FROM_GALLERY)
+                                                .putExtra(InterfaceUtils.INTENT_COME_FROM, LIBRARY_COME_FROM_GALLERY)
                                                 .putExtra(RESULT_IMAGE_PATH, file.getAbsolutePath()),
                                         ACTION_REQUEST_CAMERA);
                             } catch (Exception ignored) {
@@ -60,13 +61,13 @@ public class ActivityCameraGallery extends AppCompatActivity {
                     } else {
                         ArrayList<ModelChild> childArrayList = data.getParcelableArrayListExtra(GALLERY_INTENT_FOR_MODEL);
                         for (ModelChild modelChild : childArrayList) {
-                            File file = new File(modelChild.getFilePath());
+                             file = new File(modelChild.getFilePath());
                         }
                     }
                     break;
                 case ACTION_REQUEST_CAMERA:
                     if (data != null) {
-                        File upcomingFile = new File(data.getStringExtra(RESULT_IMAGE_PATH));
+                         file = new File(data.getStringExtra(RESULT_IMAGE_PATH));
                     }
                     break;
             }
@@ -79,6 +80,12 @@ public class ActivityCameraGallery extends AppCompatActivity {
     }
 
     public void onClickCameraWithImage(View view) {
+        if (file!=null){
+            startActivityForResult(new Intent(ActivityCameraGallery.this, ActivityCamera.class)
+                            .putExtra(InterfaceUtils.INTENT_COME_FROM, ActivityCamera.LIBRARY_COME_FROM_GALLERY)
+                            .putExtra(RESULT_IMAGE_PATH, file.getAbsolutePath()),
+                    ACTION_REQUEST_CAMERA);
+        }
     }
 
     public void onClickGalleryActivity(View view) {
@@ -89,13 +96,13 @@ public class ActivityCameraGallery extends AppCompatActivity {
     }
 
     public void onClickGalleryBottom(View view) {
-        new PickerSingle().setThings(this, getSupportFragmentManager(), GALLERY_TYPE_IMAGE,
+        new PickerMulti().setThings(this, getSupportFragmentManager(), GALLERY_TYPE_IMAGE,
                 GALLERY_MODE_SINGLE).onClickListener(new InterfaceGallery.InterfaceSingleModeItemClickListener() {
             @Override
             public void getResponse(ModelChild modelChild) {
 
             }
-        }).showPicker();
+        }).setColumnCount(4).showPicker();
 
     }
 
@@ -107,7 +114,7 @@ public class ActivityCameraGallery extends AppCompatActivity {
     }
 
     public void onClickGalleryBottomMulti(View view) {
-        new PickerSingle().setThings(this, getSupportFragmentManager(), GALLERY_TYPE_IMAGE,
+        new PickerMulti().setThings(this, getSupportFragmentManager(), GALLERY_TYPE_ALL,
                 GALLERY_MODE_MULTI).onSubmitClickListener(new InterfaceGallery.InterfaceMultiModeItemClickListener() {
             @Override
             public void getResponse(ArrayList<ModelChild> selectedArrayList) {
@@ -124,7 +131,7 @@ public class ActivityCameraGallery extends AppCompatActivity {
     }
 
     public void onClickGalleryAudioBottom(View view) {
-        new PickerSingle().setThings(this, getSupportFragmentManager(), GALLERY_TYPE_AUDIO,
+        new PickerMulti().setThings(this, getSupportFragmentManager(), GALLERY_TYPE_AUDIO,
                 GALLERY_MODE_SINGLE).onClickListener(new InterfaceGallery.InterfaceSingleModeItemClickListener() {
             @Override
             public void getResponse(ModelChild modelChild) {
@@ -141,7 +148,7 @@ public class ActivityCameraGallery extends AppCompatActivity {
     }
 
     public void onClickGalleryFileBottom(View view) {
-        new PickerSingle().setThings(this, getSupportFragmentManager(), GALLERY_TYPE_FILE,
+        new PickerMulti().setThings(this, getSupportFragmentManager(), GALLERY_TYPE_FILE,
                 GALLERY_MODE_SINGLE).onClickListener(new InterfaceGallery.InterfaceSingleModeItemClickListener() {
             @Override
             public void getResponse(ModelChild modelChild) {

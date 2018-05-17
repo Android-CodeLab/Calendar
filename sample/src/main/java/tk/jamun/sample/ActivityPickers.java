@@ -47,9 +47,9 @@ import static tk.jamun.ui.pickers.extras.InterfaceLanguageListener.LANG_URDU;
 
 
 public class ActivityPickers extends AppCompatActivity {
-    private static final int ACTION_REQUEST_CAMERA = 111;
     private PickerCountryBottom pickerCountryBottom;
     private PickerLanguageBottom pickerLanguageBottom;
+    private static final int ACTION_REQUEST_CAMERA = 111;
     private PickerIntent intentPicker;
     private PickerShareFiles pickerShareFiles;
     private DrawerLayout drawerLayout;
@@ -83,7 +83,6 @@ public class ActivityPickers extends AppCompatActivity {
                     public void singleModeData(ModelLanguage modelLanguage) {
                         super.singleModeData(modelLanguage);
                     }
-
 
                     @Override
                     public void multiModeData(ArrayList<ModelLanguage> languageArrayList) {
@@ -288,7 +287,7 @@ public class ActivityPickers extends AppCompatActivity {
         arrayListChild.add(new ModelLanguage(LANG_ENGLISH, "English", "English"));
         arrayListChild.add(new ModelLanguage(LANG_HINDI, "Hindi", "हिंदी"));
         arrayListChild.add(new ModelLanguage(LANG_ARABIC, "Arabic", "عربى"));
-        arrayList.add(new ModelLanguageParent(arrayListChild, getString(R.string.jamun_pickers_string_text_setting_select_language)));
+        arrayList.add(new ModelLanguageParent(arrayListChild, getString(R.string.library_pickers_string_text_setting_select_language)));
         arrayListChild = new ArrayList<>();
         arrayListChild.add(new ModelLanguage(LANG_PUNJABI, "Punjabi", "ਪੰਜਾਬੀ"));
         arrayListChild.add(new ModelLanguage(LANG_BENGALI, "Bengali", "বাঙালি"));

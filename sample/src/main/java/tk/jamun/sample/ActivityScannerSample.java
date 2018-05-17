@@ -2,11 +2,8 @@ package tk.jamun.sample;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.speech.RecognizerIntent;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
-import java.util.ArrayList;
 
 import tk.jamun.scanner.classes.ActivityQrReader;
 

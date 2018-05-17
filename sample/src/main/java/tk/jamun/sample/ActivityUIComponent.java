@@ -7,6 +7,7 @@ import android.view.View;
 import tk.jamun.ui.utils.JamunDialogInterface;
 import tk.jamun.ui.views.JamunAlertDialog;
 
+
 public class ActivityUIComponent extends AppCompatActivity {
 
     @Override
