@@ -1,5 +1,9 @@
 # Jamun-Calendar
+
+A developer handy Tools.
+
 Calendar is a collection of Beautiful Activities which help others to make there Fully Custom Calendar View with Single and Multi Date Picker Functionality.
+
 
 ### Introduction
 
@@ -7,33 +11,198 @@ Calendar is a collection of Beautiful Activities which help others to make there
 
 ### Dual Date Picker
 
+Feature Dual date picker provide fully custom selection between dates, months and year. A very neat and clean view for Your User to Get maximum satisfaction either by UI or UX, And Plus points for developer have with full custom handy tags, for developer maximum satisfaction.
+
 Before Selection | After Selection
 ---- | ----
 ![jamun_calendar_dual](https://user-images.githubusercontent.com/38988514/40102556-73d15a56-5908-11e8-84db-81565897c8c8.png) | ![jamun_calendar_dual_selection](https://user-images.githubusercontent.com/38988514/40102557-7414b288-5908-11e8-8b90-aaa4aff751e1.png)
 
 ### Single Date Picker
 
+Feature single Picker is provide you date selection functionality with fully custom tags. Another UI/UX combination for to enhacne app quality and satisfaction.
+
 Selected Date Picker | Custom Date Picker
 ---- | ----
 ![jamun_Calendar_single](https://user-images.githubusercontent.com/38988514/40102554-733de262-5908-11e8-93da-140001e494a2.png) | ![jamun_calendar_single_custom_selection](https://user-images.githubusercontent.com/38988514/40102555-738ad6d0-5908-11e8-8072-f05cd2a9cffb.png)
 
-### Working
+### What's New? (0.0.1)
+* Stable **Official Version** for Developers and Live Apps.
+* Very Light Weight and Developer app theme Oriented
+* Easy Calling Mechanism with **Instant reply** via onActivityResult
+* Provide you very flexible wat to Customize the whole Module.
+* Need less calls with many customs Tags to reach maximum developer satisfaction.
+* Already tested with Live apps **[SimplyBlood](https://play.google.com/store/apps/details?id=com.simplyblood)** And **[ZINI](https://play.google.com/store/apps/details?id=ai.zini)**
+
+------
+
+# How to Implement
+
+Once the project has been added to gradle, You can use these lines of code to configure pickers....
+
+## Calling Code
+
+Three simple steps to Take care of whole Modele : 
+
+### Step 1. Define Intent Object
+
+Simple Object declaration to Define Type of Picker you want, There are two Types : 
+
+A) Single Date Picker
+B) Multi or Dual Date Picker
+
+```
+**Single Date Picker**
+Intent intent = new Intent(getContext(), ActivityCalenderSingle.class);
+
+or
+
+**Multi Date Picker**
+Intent intent = new Intent(this, ActivityCalenderDual.class);
+
+```
+### Step 2. Start Module By Calling
+
+This method is very common to Android Developer, Very easy calling way to Start an activity help you same for calling this Picker :
+
+```
+startActivityForResult(intent, INTENT_CALENDER_SINGLE_PICKER);
+```
+
+### Step 3. Get Result from Picker
+
+```
+@Override
+public void onActivityResult(int requestCode, int resultCode, Intent data) {
+super.onActivityResult(requestCode, resultCode, data);
+if (requestCode == INTENT_CALENDER_DUAL_PICKER) {
+    if (resultCode == RESULT_OK) {
+       modelCalenderFrom = data.getParcelableExtra(INTENT_CALENDER_DATA_ONE);
+       modelCalenderTo = data.getParcelableExtra(INTENT_CALENDER_DATA_TWO);
+       updateDate();
+    }
+} else if (requestCode == INTENT_CALENDER_SINGLE_PICKER) {
+    if (resultCode == RESULT_OK) {
+          modelCalender = data.getParcelableExtra(INTENT_CALENDER_DATA);
+    }
+}
+```
+Result Provide you ModelCalendar Object, that have all required Object to Full fill any Developer Request. It also have Calendar Object for More satisfaction.
+
+------
+
+## Picker Customize 
+
+Intent Object provide you custom functionality to work Module according to your requirement :
+
+**Set Title of the Date Picker**
+
+By Defining this tag with String can help you setting Title of the date Picker.
+
+```
+intentType.putExtra(INTENT_CALENDER_TITLE, "Title of the Picker");
+```
+
+**Set Predefined Date**
+
+To set selected Date in Calendar, Also used if user already selected Date, so this will help you user to Navigate Directly to Selected Once :
+
+```
+**Single Date Picker**
+
+intent.putExtra(INTENT_CALENDER_DATE, modelCalender.getDate());
+intentType.putExtra(INTENT_CALENDER_MONTH, modelCalender.getMonth());
+intentType.putExtra(INTENT_CALENDER_YEAR, modelCalender.getYear());
+
+**Multi Date Picker**
+intent.putExtra(INTENT_CALENDER_YEAR_FROM, modelCalenderFrom.getYear());
+intent.putExtra(INTENT_CALENDER_MONTH_FROM, modelCalenderFrom.getMonth() - 1);
+intent.putExtra(INTENT_CALENDER_DATE_FROM, modelCalenderFrom.getDate());
+intent.putExtra(INTENT_CALENDER_YEAR_TO, modelCalenderTo.getYear());
+intent.putExtra(INTENT_CALENDER_MONTH_TO, modelCalenderTo.getMonth() - 1);
+intent.putExtra(INTENT_CALENDER_DATE_TO, modelCalenderTo.getDate());       
+```
+
+**Set Minimum or Maximum Date Today**
+
+There is a provisioin in this library to start your Picker selection from Today either Today date as Starting date or Ending date :
+
+```
+**Minimum Date Today**
+intent.putExtra(INTENT_CALENDER_SET_MIN_DATE_TODAY, true);
+
+**Maximum Date Today**
+intent.putExtra(INTENT_CALENDER_SET_MAX_DATE_TODAY, true);
+```
+
+Warning Note : Don't set them both at once, it may be crash your app;
+
+**Set Maximum or Minimum Year,Date,Month for selection Upto**
+
+ To bound your User Selection, just need to call intent with some Tags and Thats it Boundation Applied:
+ 
+```
+**Maximum Year Upto**
+intent.putExtra(INTENT_CALENDER_MAX_YEAR, currentYear + 10(upto Value));
+intent.putExtra(INTENT_CALENDER_MAX_MONTH, Month(upto Value));
+intent.putExtra(INTENT_CALENDER_MAX_DATE, date(upto Value));
+
+**Minimum Year Upto**
+intent.putExtra(INTENT_CALENDER_MIN_YEAR, currentYear - 10(Above Value));
+intent.putExtra(INTENT_CALENDER_MIN_MONTH, Month(Above Value));
+intent.putExtra(INTENT_CALENDER_MIN_DATE, date(Above Value));
+
+or For setting Both min and max Together
+intent.putExtra(INTENT_CALENDER_MAX_YEAR, currentYear + 10(upto Value));
+intent.putExtra(INTENT_CALENDER_MAX_MONTH, Month(upto Value));
+intent.putExtra(INTENT_CALENDER_MAX_DATE, date(upto Value));
+intent.putExtra(INTENT_CALENDER_MIN_YEAR, currentYear - 10(upto Value));
+intent.putExtra(INTENT_CALENDER_MIN_MONTH, Month(Above Value));
+intent.putExtra(INTENT_CALENDER_MIN_DATE, date(Above Value));
+
+Also Used as
+Either,
+intent.putExtra(INTENT_CALENDER_SET_MAX_DATE_TODAY, true);
+
+intent.putExtra(INTENT_CALENDER_MIN_YEAR, currentYear - 10(upto Value));
+intent.putExtra(INTENT_CALENDER_MIN_MONTH, Month(Above Value));
+intent.putExtra(INTENT_CALENDER_MIN_DATE, date(Above Value));
+
+Or,
+intent.putExtra(INTENT_CALENDER_SET_MIN_DATE_TODAY, true);
+
+intent.putExtra(INTENT_CALENDER_MAX_YEAR, currentYear + 10(upto Value));
+intent.putExtra(INTENT_CALENDER_MAX_MONTH, Month(upto Value));
+intent.putExtra(INTENT_CALENDER_MAX_DATE, date(upto Value));
+
+
+```
+Warning Note : Don't call with Both INTENT_CALENDER_SET_MAX_DATE_TODAY or with INTENT_CALENDER_SET_MIN_DATE_TODAY together with this, it may be crash your app;
+
+------
+
+### Working Example for Date Of Birth Selection
+
+```
+ Intent intentType = new Intent(getContext(), ActivityCalenderSingle.class);
+ //used if user already selected Date, so this will help you user to Navigate Directly to Selected Once
+ if (modelCalender.getDate() != 0) {
+    intentType.putExtra(INTENT_CALENDER_DATE, modelCalender.getDate());
+    intentType.putExtra(INTENT_CALENDER_MONTH, modelCalender.getMonth());
+    intentType.putExtra(INTENT_CALENDER_YEAR, modelCalender.getYear());
+ }
+ intentType.putExtra(INTENT_CALENDER_TITLE, getString(R.string.string_activity_name_dob));
+ intentType.putExtra(INTENT_CALENDER_MAX_YEAR, HelperTime.getInstance().getCurrentYear() - CONSTANT_FOR_DOB_UPTO);
+startActivityForResult(intentType, INTENT_CALENDER_SINGLE_PICKER);
+```
+
 
 Single Date Picker | 
 ---- |
 ![calender](https://user-images.githubusercontent.com/38988514/40102644-a742f642-5908-11e8-9a28-bc8c8ef7423c.gif)
 
-### What's New? (0.0.1)
-* Stable **Official Version** for Developers and Live Apps.
-* 
-* Easy Calling Mechanism with **Instant reply** via Listeners and Return Functions
-* 
-* Need less calls with many customs methods to reach maximum developer satisfaction.
-* Already tested with Live apps
-
 ------
 
-# Dependency
+# Dependency (Only)
 
 * Android Appcompact and Support Fragment Library ``v27.1.1``
 
@@ -41,6 +210,11 @@ Single Date Picker |
 
 Desgin & Developed by : **[Jatin Sahgal](https://www.linkedin.com/in/jatinsahgal/)**
  (**[Linkedin](https://www.linkedin.com/in/jatinsahgal/)** & **[Website](https://jatin.techcruzers.com)**) 
+
+Content Writer : **[Achal Garg](https://www.linkedin.com/in/techgarg/)**
+ (**[Linkedin](https://www.linkedin.com/in/techachal/)** & **[Website](https://achal.techcruzers.com)**) 
+
+Company : **[Techcruzers](https://www.techcruzers.com)**
 
 # Live Project using this Library
 
