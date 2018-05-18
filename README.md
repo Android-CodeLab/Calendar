@@ -32,7 +32,7 @@ Selected Date Picker | Custom Date Picker
 * Provide you very flexible wat to Customize the whole Module.
 * Need less calls with many customs Tags to reach maximum developer satisfaction.
 
-### Quality Measures? of(0.0.1)
+### Quality Measures? for (0.0.1)
 
 The following apps are using this library without facing any kind of Bugs.
 
