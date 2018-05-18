@@ -35,11 +35,31 @@ Selected Date Picker | Custom Date Picker
 
 ------
 
+## Gradle Configuration
+
+**Add the dependency**
+
+```java
+dependencies {
+        compile 'tk.jamun:calendar:0.0.1'
+}
+```
+
+## Maven Config
+
+```xml
+<dependency>
+  <groupId>tk.jamun</groupId>
+  <artifactId>calendar</artifactId>
+  <version>0.0.1</version>
+  <type>aar</type>
+</dependency>
+```
+------
+
 # How to Implement
 
 Once the project has been added to gradle, You can use these lines of code to configure pickers....
-
-
 
 ## Calling Code
 
