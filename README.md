@@ -31,7 +31,13 @@ Selected Date Picker | Custom Date Picker
 * Easy Calling Mechanism with **Instant reply** via onActivityResult
 * Provide you very flexible wat to Customize the whole Module.
 * Need less calls with many customs Tags to reach maximum developer satisfaction.
-* Already tested with Live apps **[SimplyBlood](https://play.google.com/store/apps/details?id=com.simplyblood)** And **[ZINI](https://play.google.com/store/apps/details?id=ai.zini)**
+
+### Quality Measures? of(0.0.1)
+
+The following apps are using this library without facing any kind of Bugs.
+
+* **[SimplyBlood](https://play.google.com/store/apps/details?id=com.simplyblood)**
+* **[ZINI](https://play.google.com/store/apps/details?id=ai.zini)**,
 
 ------
 
@@ -237,13 +243,6 @@ Content Writer : **[Achal Garg](https://www.linkedin.com/in/techgarg/)**
  (**[Linkedin](https://www.linkedin.com/in/techachal/)** & **[Website](https://achal.techcruzers.com)**) 
 
 Company : **[Techcruzers](https://www.techcruzers.com)**
-
-# Live Project using this Library
-
-The following apps are using this library without facing any kind of Bugs.
-
-* **[SimplyBlood](https://play.google.com/store/apps/details?id=com.simplyblood)**
-* **[ZINI](https://play.google.com/store/apps/details?id=ai.zini)**
 
 ## More Library under Jamun 
 * **[Pickers](https://github.com/Lib-Jamun/Pickers.git)**
