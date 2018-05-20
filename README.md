@@ -15,7 +15,7 @@ Feature Dual date picker provide fully custom selection between dates, months an
 
 Before Selection | After Selection
 ---- | ----
-![jamun_calendar_dual](https://user-images.githubusercontent.com/38988514/40102556-73d15a56-5908-11e8-84db-81565897c8c8.png) | ![jamun_calendar_dual_selection](https://user-images.githubusercontent.com/38988514/40102557-7414b288-5908-11e8-8b90-aaa4aff751e1.png)
+![jamun_calendar_dual](https://user-images.githubusercontent.com/38988514/40280633-76b74c0c-5c74-11e8-8843-e4ffbc20b59b.png) | ![jamun_calendar_dual_selection](https://user-images.githubusercontent.com/38988514/40280630-738e61a0-5c74-11e8-8708-9e74c059206e.png)
 
 ### Single Date Picker
 
@@ -23,8 +23,7 @@ Feature single Picker is provide you date selection functionality with fully cus
 
 Selected Date Picker | Custom Date Picker
 ---- | ----
-![jamun_Calendar_single](https://user-images.githubusercontent.com/38988514/40102554-733de262-5908-11e8-93da-140001e494a2.png) | ![jamun_calendar_single_custom_selection](https://user-images.githubusercontent.com/38988514/40102555-738ad6d0-5908-11e8-8072-f05cd2a9cffb.png)
-
+![jamun_calendar_single](https://user-images.githubusercontent.com/38988514/40280631-746a2762-5c74-11e8-86d0-f3e705db4548.png) | ![jamun_calendar_single_custom_selection](https://user-images.githubusercontent.com/38988514/40280632-75a5872a-5c74-11e8-8db7-6a1a9704de2a.png)
 ### What's New? (0.0.1)
 * Stable **Official Version** for Developers and Live Apps.
 * Very Light Weight and Developer app theme Oriented
@@ -127,7 +126,7 @@ Intent Object provide you custom functionality to work Module according to your 
 By Defining this tag with String can help you setting Title of the date Picker.
 
 ```
-intentType.putExtra(INTENT_CALENDER_TITLE, "Title of the Picker");
+intent.putExtra(INTENT_CALENDER_TITLE, "Title of the Picker");
 ```
 
 * **Set Predefined Date**
@@ -138,8 +137,8 @@ To set selected Date in Calendar, Also used if user already selected Date, so th
 **Single Date Picker**
 
 intent.putExtra(INTENT_CALENDER_DATE, modelCalender.getDate());
-intentType.putExtra(INTENT_CALENDER_MONTH, modelCalender.getMonth());//(0 to 11)
-intentType.putExtra(INTENT_CALENDER_YEAR, modelCalender.getYear());
+intent.putExtra(INTENT_CALENDER_MONTH, modelCalender.getMonth());//(0 to 11)
+intent.putExtra(INTENT_CALENDER_YEAR, modelCalender.getYear());
 
 **Multi Date Picker**
 intent.putExtra(INTENT_CALENDER_YEAR_FROM, modelCalenderFrom.getYear());
@@ -245,6 +244,7 @@ Content Writer : **[Achal Garg](https://www.linkedin.com/in/techgarg/)**
 Company : **[Techcruzers](https://www.techcruzers.com)**
 
 ## More Library under Jamun 
+
 * **[Pickers](https://github.com/Lib-Jamun/Pickers.git)**
 Pickers Library provide you a set of Pickers like Country, Language, Share and Intent Chooser.
 
