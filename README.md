@@ -1,5 +1,4 @@
 # Jamun-Calendar
- <a href='https://bintray.com/lib-jamun/Jamun/Calendar/0.0.1/link'><img src='https://api.bintray.com/packages/lib-jamun/Jamun/Calendar/images/download.svg?version=0.0.1'></a>
 
 A developer handy Tools.
 
