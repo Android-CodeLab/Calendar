@@ -46,7 +46,7 @@ The following apps are using this library without facing any kind of Bugs.
 
 ```java
 dependencies {
-        compile 'tk.jamun:calendar:0.0.1'
+        compile 'tk.jamun.ui:calendar:0.0.1'
 }
 ```
 
@@ -54,7 +54,7 @@ dependencies {
 
 ```xml
 <dependency>
-  <groupId>tk.jamun</groupId>
+  <groupId>tk.jamun.ui</groupId>
   <artifactId>calendar</artifactId>
   <version>0.0.1</version>
   <type>aar</type>
