@@ -254,6 +254,9 @@ allow you to access Country picking functionality with great UI/UX design, and t
 * **[Language-Pickers](https://github.com/Lib-Jamun/Pickers.git)**
 provides you read-made Language picker  which is easy to use and comes with great UI/UX, and there are numberous of function which help you to modify picker as per your requirements. Library has been provided with four custom UI initate mode you can decide how the view of picker can be initate. You can also decide weather picker inheriate Single or Multi Selection property.
 
+* **[Share-Dialog-Pickers](https://github.com/Lib-Jamun/Pickers.git)**
+provide you Intent Chooser with great UI/UX. It automatically retrive the sort list of all the apps which can share the file. This functionality saves much of your task. You can also share dialog Picker for sending Large files. For this you just need to call a single function with file as Argument.
+
 * **[Scanner](https://github.com/Lib-Jamun/scanner.git)**
 is a collection of Beautiful Activity which help others to make there own Custom QR/Barcode Scanner. 
 
