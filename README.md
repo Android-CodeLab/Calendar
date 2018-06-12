@@ -4,11 +4,6 @@ A developer handy Tools.
 
 Calendar is a collection of Beautiful Activities which help others to make there Fully Custom Calendar View with Single and Multi Date Picker Functionality.
 
-
-### Introduction
-
-* 
-
 ### Dual Date Picker
 
 Feature Dual date picker provide fully custom selection between dates, months and year. A very neat and clean view for Your User to Get maximum satisfaction either by UI or UX, And Plus points for developer have with full custom handy tags, for developer maximum satisfaction.
