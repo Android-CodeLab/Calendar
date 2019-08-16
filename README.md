@@ -19,19 +19,25 @@ Feature single Picker is provide you date selection functionality with fully cus
 Selected Date Picker | Custom Date Picker
 ---- | ----
 ![jamun_calendar_single](https://user-images.githubusercontent.com/38988514/40280631-746a2762-5c74-11e8-86d0-f3e705db4548.png) | ![jamun_calendar_single_custom_selection](https://user-images.githubusercontent.com/38988514/40280632-75a5872a-5c74-11e8-8db7-6a1a9704de2a.png)
-### What's New? (0.0.1)
+### What's New? {Latest Version}
 * Stable **Official Version** for Developers and Live Apps.
 * Very Light Weight and Developer app theme Oriented
 * Easy Calling Mechanism with **Instant reply** via onActivityResult
 * Provide you very flexible wat to Customize the whole Module.
 * Need less calls with many customs Tags to reach maximum developer satisfaction.
 
-### Quality Measures? for (0.0.1)
+### Quality Measures? for {Latest Version}
 
 The following apps are using this library without facing any kind of Bugs.
 
 * **[SimplyBlood](https://play.google.com/store/apps/details?id=com.simplyblood)**
 * **[ZINI](https://play.google.com/store/apps/details?id=ai.zini)**,
+* **[RentalBazar](https://play.google.com/store/apps/details?id=com.rentalbazaar)** 
+* **[DoubtCrusher](https://play.google.com/store/apps/details?id=com.doubtcrusher)**
+* **[BookAGround](https://play.google.com/store/apps/details?id=com.bookaground)**
+* **[PeyFree](https://play.google.com/store/apps/details?id=com.peyfree)**
+* **[ClueRace](https://play.google.com/store/apps/details?id=com.cluerace)**
+* **[CIS-Connect In Single](https://play.google.com/store/apps/details?id=com.connectinsingle)**
 
 ------
 
@@ -39,9 +45,22 @@ The following apps are using this library without facing any kind of Bugs.
 
 **Add the dependency**
 
-```java
+```
+Latest Version : 0.0.8
+
+Android
 dependencies {
-        compile 'tk.jamun.ui:calendar:0.0.1'
+     compile 'tk.jamun.ui:calendar:{Latest Version}'
+}
+
+AndroidX
+dependencies {
+     compile 'tk.jamunx.ui:calendar:{Latest Version}'
+}
+
+Kotlin
+dependencies {
+     compile 'tk.jamun-ktx.ui:calendar:{Latest Version}'
 }
 ```
 
@@ -49,9 +68,14 @@ dependencies {
 
 ```xml
 <dependency>
+Android
   <groupId>tk.jamun.ui</groupId>
+AndroidX
+  <groupId>tk.jamunx.ui</groupId>
+Kotlin
+  <groupId>tk.jamun-ktx.ui</groupId>
   <artifactId>calendar</artifactId>
-  <version>0.0.1</version>
+  <version>{Latest Version}</version>
   <type>aar</type>
 </dependency>
 ```
@@ -231,7 +255,7 @@ Single Date Picker |
 ## Credits
 
 Desgin & Developed by : **[Jatin Sahgal](https://www.linkedin.com/in/jatinsahgal/)**
- (**[Linkedin](https://www.linkedin.com/in/jatinsahgal/)** & **[Website](https://blog.jamun.tk)**) 
+ (**[Linkedin](https://www.linkedin.com/in/jatinsahgal/)** & **[Website](http://androidcodelab.com/)** & **[Github](https://github.com/Lib-Jamun)**) 
 
 ## More Library under Jamun 
 
